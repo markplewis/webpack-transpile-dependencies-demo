@@ -1,3 +1,4 @@
+import "@babel/polyfill";
 // import phb from 'posthtml-beautify';
 import bf from 'bf';
 
