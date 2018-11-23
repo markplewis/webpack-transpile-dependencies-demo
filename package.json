@@ -29,9 +29,13 @@
               "ie 11"
             ]
           },
+          "useBuiltIns": "entry",
           "debug": true
         }
       ]
     ]
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0"
   }
 }
