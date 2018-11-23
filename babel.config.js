@@ -5,7 +5,7 @@ const presets = [
       targets: {
         ie: "11"
       },
-      useBuiltIns: "usage",
+      useBuiltIns: "entry",
     },
   ],
 ];
