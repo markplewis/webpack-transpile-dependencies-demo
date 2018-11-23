@@ -1,5 +1,3 @@
-const BabelEnginePlugin = require('babel-engine-plugin');
-
 module.exports = {
     mode: 'development',
     target: 'web',
@@ -9,22 +7,9 @@ module.exports = {
         filename: 'bundle.js'
     },
     plugins: [
-        new BabelEnginePlugin({
-            presets: [
-                ['@babel/preset-env', {
-                    "targets": {
-                        "browsers": [
-                            "last 2 versions"
-                        ]
-                    },
-                    "debug": true,
-                    "useBuiltIns": "usage"
-                }]
-            ]
-        })
     ],
     resolve: {
-        modules: [ 'my_modules' ]
+        modules: [ 'my_modules', 'node_modules' ]
     },
     module: {
         rules: [
