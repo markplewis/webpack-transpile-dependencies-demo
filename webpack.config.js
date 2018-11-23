@@ -1,4 +1,5 @@
 const BabelEnginePlugin = require('babel-engine-plugin');
+const path = require('path');
 
 module.exports = {
     mode: 'development',
@@ -18,7 +19,10 @@ module.exports = {
         rules: [
             {
                 test: /\.js?$/,
-                loader: 'babel-loader'
+                loader: 'babel-loader',
+                include: [
+                  path.resolve(__dirname, 'node_modules/posthtml-beautify')
+                ]
             }
         ]
     }
