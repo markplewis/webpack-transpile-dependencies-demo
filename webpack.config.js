@@ -1,4 +1,4 @@
-const BabelEnginePlugin = require('babel-engine-plugin');
+// const BabelEnginePlugin = require('babel-engine-plugin');
 const path = require('path');
 
 module.exports = {
@@ -9,9 +9,9 @@ module.exports = {
     output: {
         filename: 'bundle.js'
     },
-    plugins: [
-        new BabelEnginePlugin()
-    ],
+    // plugins: [
+    //     new BabelEnginePlugin()
+    // ],
     resolve: {
         modules: [ 'my_modules', 'node_modules' ]
     },
@@ -20,9 +20,10 @@ module.exports = {
             {
                 test: /\.js?$/,
                 loader: 'babel-loader',
-                include: [
-                  path.resolve(__dirname, 'node_modules/posthtml-beautify')
-                ]
+                // include: [
+                //   path.resolve(__dirname, 'index.js'),
+                //   path.resolve(__dirname, 'node_modules')
+                // ],
             }
         ]
     }
