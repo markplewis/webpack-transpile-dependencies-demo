@@ -1,0 +1,36 @@
+{
+  "name": "webpack-transpile-dependencies-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --progress"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "babel-engine-plugin": "^0.3.0",
+    "babel-loader": "^8.0.4",
+    "webpack": "^4.26.0",
+    "webpack-cli": "^3.1.2"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "browsers": [
+              "ie 11"
+            ]
+          },
+          "debug": true
+        }
+      ]
+    ]
+  }
+}
